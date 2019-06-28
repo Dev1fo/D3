@@ -1,0 +1,123 @@
+/* on cible tous les svg */
+svg {
+    background-color: #C7D9D9;
+    border: 1px solid #000;
+    margin-left: 17%;
+    border-radius: .523rem;
+}
+:valid {
+    box-shadow: 0 0 2px 1px green;
+ }
+
+#btn {
+    margin-bottom: 1%;
+    margin-left: 35%;
+}
+
+ rect:hover {
+    fill: green; 
+    stroke: none;
+    cursor: pointer;
+} 
+
+h3 {
+    font-size: 180%;
+    margin-left: 35%;
+}
+
+line {
+    stroke: green;
+    stroke-opacity: 0.5;
+    stroke-dasharray: 2%
+}
+
+.tooltip {
+    position: absolute;
+    z-index: 10;
+    text-align: left;
+    border-radius: 4px;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    padding: 8px;
+    color: #fff;
+    background-color: #000;
+    font: 18px sans-serif;
+    max-width: 300px;
+}
+
+/* Css pour le formulaire */
+
+fieldset {
+    width: 550px;
+    padding: 30px;
+    margin: 50px auto;
+    background: rgba(230, 230, 230, 1);
+    border: 1px solid rgba(55, 55, 55, 1);
+    border-radius: 3px;
+    position: relative;
+    float:left;
+
+}
+
+select,
+input {
+    color: blue;
+}
+
+legend {
+    display: block;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0;
+    height: 35px;
+    padding-left: 36%;
+    line-height: 35px;
+    background: linear-gradient(to bottom, #FDD13B, #FEAE00);
+    color: blue;
+    font-weight: bold;
+}
+
+label {
+    display: inline-block;
+    width: 150px;
+
+}
+
+select,
+input[type="text"],
+[type="number"],
+[type="color"],[type="url"] {
+    background: rgba(255, 255, 255, 1);
+    height: 40px;
+    width: 350px;
+    border: 1px dashed rgba(55, 55, 55, 1);
+    padding: 0 20px;
+    margin: 20px 0;
+    font-size: 1.1em;
+}
+
+input:required {
+    border: 1px dashed orange;
+}
+
+input[type="submit"] {
+    font-weight: bold;
+    color: blue;
+    display: block;
+    background: linear-gradient(to bottom, #FDD13B, #FEAE00);
+    padding: 20px 50px;
+    border: 1px solid #FEAE00;
+    border-radius: 5px;
+    box-shadow: 0 0 0 1px #FFF0D2 inset, 0 2px 2px #d0c2de;
+    margin: auto;
+}
+
+input[type="submit"]:hover {
+    background: #FEAE00;
+}
+
+input[type="submit"]:active {
+    background: #FEAE00;
+    box-shadow: 0 0px 10px rgba(178, 37, 78, 0.5) inset;
+}

@@ -1,0 +1,54 @@
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8">
+    <title>D3 Demo - simple BarChart</title>
+    <link rel="stylesheet" href="./css/app.css">
+</head>
+
+<body>
+    <h1>Module de visualisation de donnée en D3</h1>
+    <form>
+
+        <fieldset>
+            <!-- Première partie démo -->
+            <legend>Personnalisation bar chart</legend>
+
+            <label for="width">Largeur</label><input type="number" id="width" min="700" max="2000" placeholder="Largeur en pixel"
+                required>
+            <label for="height">Hauteur</label><input type="number" id="height" min="700" max="2000" placeholder="Hauteur en pixel"
+                required>
+            <label for="startCol">Couleur(Min data)</label><input type="color" id="startCol" value="#55fdfd" required>
+            <label for="endCol">Couleur(Max data)</label><input type="color" id="endCol" value="#ff8040" required>
+            <label for="data">Source donnée</label>
+            <select id="data" onchange="choixTypeData()">
+                <option selected value="0">Fichier js</option>
+                <option value="1">Fichier Json</option>
+                <option value="2">Lien externe</option>
+            </select>
+            <p id="lienUrl">
+            <label for="url">Veuillez saisir un lien</label>
+            <input type="url" placeholder="https://example.com/fichierTest.js" id="url" required>
+            </p>
+            <input type="submit" id="valider" value="Générer bar chart">
+
+        </fieldset>
+    </form>
+
+<script>
+    let counter;
+      
+    document.getElementById("lienUrl").style.display = 'none';
+    function choixTypeData() {
+    document.getElementById("lienUrl").style.display = 'none';
+    if (document.getElementById("data").value == 2) {
+        document.getElementById("lienUrl").style.display = 'block';
+    }
+}
+    </script>
+    <script type="text/javascript" src="./app/d3.v5.min.js"></script>
+    <script type="module" src="./app/app.js"></script>
+    
+</body>
+
+</html>
